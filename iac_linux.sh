@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$EUID" -ne 0 ];then
-    echo "Please run this script as root user"
+    echo "Por favor execute esse script como usuário root"
     exit 1
 fi
 
@@ -25,7 +25,7 @@ echo "Grupos GRP_ADM, GRP_VEN, GRP_SEC criados"
 echo "Criando os usuários..."
 useradd carlos -m -s /bin/bash -G GRP_ADM -c "Carlos Nascimento" -p $(openssl passwd Senha123)
 useradd maria -m -s /bin/bash -G GRP_ADM -c "Maria das Graças" -p $(openssl passwd Senha123)
-useradd joao_ -m -s /bin/bash -G GRP_ADM -c "Joao Pedro" -p $(openssl password Senha123)
+useradd joao -m -s /bin/bash -G GRP_ADM -c "Joao Pedro" -p $(openssl password Senha123)
 
 useradd debora -m -s /bin/bash -G GRP_VEN -c "Debora Dias" -p $(openssl passwd Senha123)
 useradd sebastiana -m -s /bin/bash -G GRP_VEN -c "Sebastiana Lopes" -p $(openssl passwd Senha123)
